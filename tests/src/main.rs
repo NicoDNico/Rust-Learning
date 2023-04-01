@@ -1,9 +1,9 @@
 
 
 fn main() {
-    let x:&str = "Owned";
-    ownership_test(x);
-    println!("{x}");
+    let x:String = String::from("Owned");
+    let x_len = reference(&x);
+    println!("{x} {x_len}");
 
 }
 
@@ -24,6 +24,10 @@ fn main() {
 
 // }
 
-fn ownership_test(some_string:&str){
-    println!("{some_string}");
+// fn ownership_test(some_string:&str){
+//     println!("{some_string}");
+// }
+
+fn reference(x:&String)->usize{
+    x.len()
 }
