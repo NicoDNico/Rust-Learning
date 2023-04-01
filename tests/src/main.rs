@@ -1,4 +1,5 @@
 
+
 struct Info {
     mail: String,
     name: String,
@@ -20,6 +21,7 @@ fn main() {
 // fn imp_return(x: f32, y:f32)-> f32 {
 //     x / y
 // }
+
 
 // fn scoped(){
 //     let s: &str= "no";
