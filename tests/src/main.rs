@@ -3,9 +3,15 @@
 
 fn main() {
     
-    let stats = info_builder(String::from("UserTest"),122,102,211);
-    println!("{:#?}",stats);
-    println!("Ratio:{}",stats.ratio())
+    let player1 = info_builder(String::from("UserTest"),122,102,211);
+    let player2 = Info{
+        user:String::from("UserTest2"),
+        kills: 120,
+        deaths: 85,
+        assists:190,
+    };
+
+    println!("Is player 2 better than player1? {}", player2.is_better(&player1));
 }
 
 
@@ -65,6 +71,12 @@ fn main() {
     impl Info{
         fn ratio(&self)-> f32{
             (self.kills + self.assists ) as f32 / self.deaths as f32 
+        }
+        fn is_better(&self,other_player:&Info )->bool{
+            if self.ratio() > other_player.ratio() {
+                return true
+            }
+            else {return false}
         }
     }
         
