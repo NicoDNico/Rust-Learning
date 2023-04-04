@@ -2,16 +2,9 @@
 
 
 fn main() {
-    
-    let player1 = info_builder(String::from("UserTest"),122,102,211);
-    let player2 = Info{
-        user:String::from("UserTest2"),
-        kills: 120,
-        deaths: 85,
-        assists:190,
-    };
+    let m = Message::Write(String::from("hello"));
+    m.call();
 
-    println!("Is player 2 better than player1? {}", player2.is_better(&player1));
 }
 
 
@@ -61,30 +54,45 @@ fn main() {
         //     }
         
         // }
-    #[derive(Debug)]
-    struct Info {
-        user:String,
-        kills: u32,
-        deaths:u32,
-        assists:u32,
-    }
-    impl Info{
-        fn ratio(&self)-> f32{
-            (self.kills + self.assists ) as f32 / self.deaths as f32 
-        }
-        fn is_better(&self,other_player:&Info )->bool{
-            if self.ratio() > other_player.ratio() {
-                return true
-            }
-            else {return false}
-        }
-    }
+    // #[derive(Debug)]
+    // struct Info {
+    //     user:String,
+    //     kills: u32,
+    //     deaths:u32,
+    //     assists:u32,
+    // }
+    // impl Info{
+    //     fn ratio(&self)-> f32{
+    //         (self.kills + self.assists ) as f32 / self.deaths as f32 
+    //     }
+    //     fn is_better(&self,other_player:&Info )->bool{
+    //         if self.ratio() > other_player.ratio() {
+    //             return true
+    //         }
+    //         else {return false}
+    //     }
+    // }
         
-    fn info_builder(user:String , kills: u32 , deaths:u32, assists:u32) ->Info{
-        Info{
-            user,
-            kills,
-            deaths,
-            assists,
+    // fn info_builder(user:String , kills: u32 , deaths:u32, assists:u32) ->Info{
+    //     Info{
+    //         user,
+    //         kills,
+    //         deaths,
+    //         assists,
+    //     }
+    // }
+    
+    // cant find another use for enums right now so im just using the ones in the book
+    #[derive(Debug)]
+    enum Message {
+        Quit,
+        Move { x: i32, y: i32 },
+        Write(String),
+        ChangeColor(i32, i32, i32),
+    }
+
+    impl Message {
+        fn call(&self) {
+            println!("{:#?}",self);
         }
     }
