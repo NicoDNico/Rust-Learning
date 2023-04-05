@@ -1,5 +1,5 @@
-// use crate::lib::utils;
+mod modulado;
 
 fn main(){
-
+    modulado::modulador("contrasena123")
 }

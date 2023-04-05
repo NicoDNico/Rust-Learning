@@ -1,9 +1,9 @@
-use crate::garden::vegetables::Asparagus;
+mod lib;
 
-pub mod garden;
+use crate::lib::eat_at_restaurant;
+
 
 fn main() {
-    let plant = Asparagus {};
-    plant.test();
+    lib::eat_at_restaurant();
 }
 
