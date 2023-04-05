@@ -26,26 +26,26 @@ fn main() {
     // }
     
     // fn ownership_test(some_string:&str){
-        //     println!("{some_string}");
-        // }
+    //         println!("{some_string}");
+    //     }
         
-        // fn reference(x:&String)->usize{
-            //     x.len()
-            // }
-            // fn slicer_test(x:String){
+    //     fn reference(x:&String)->usize{
+    //             x.len()
+    //         }
+    //         fn slicer_test(x:String){
                 
-                //     let sliced = &x[..3].len();
-                //     println!("{x} {sliced}");
-                // }
+    //                 let sliced = &x[..3].len();
+    //                 println!("{x} {sliced}");
+    //             }
                 
                 
-                // struct Info {
-                    //     mail: String,
-                    //     name: String,
-                    //     age: u8,
-                    // }
-                    // fn strcture_test(mail:String,name:String,age:u8)-> Info {
-                        //     Info{
+    //  struct Info {
+    //        mail: String,
+    //        name: String,
+    //        age: u8,
+    //                 }
+        //fn strcture_test(mail:String,name:String,age:u8)-> Info {
+        //     Info{
         //         mail,
         //         name,
         //         age,
