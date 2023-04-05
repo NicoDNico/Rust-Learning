@@ -1,9 +1,14 @@
 pub fn auth_user(username:String,password:&str)->String{
-    if password == "123aaaaa"{
-       return String::from("test@email.com")
+    
+    if password == get_password(){
+        return "test@email"
     }
-    String::from("")
+
+    
+
 }
+
+
 
 
 //this function is supposed to be the getter password to check if the correct one was given.
