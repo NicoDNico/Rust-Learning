@@ -1,5 +1,5 @@
 
-
+// idk if im correct but i believe using an internal private struct is good patterns?
 #[derive(Debug)]
 pub struct Player{
     username:String,
@@ -27,7 +27,7 @@ fn build_player(username:String, password:&str, kills:u16, deaths:u16, assists:u
     // let answer_email:String = auth_user();
     Player{
         username,
-        // email: answer_email,
+        email:String,
         kills,
         deaths,
         assists,
@@ -47,7 +47,7 @@ pub struct CalculatedStats{
     pub kills_per_game:f32,
     pub games_per_day:f32,
 }
-
+// i want to give this as an answer of the module and not the Player struct.
 pub fn build_stats(user: &Player)->CalculatedStats{
     CalculatedStats{
         username:user.username,
